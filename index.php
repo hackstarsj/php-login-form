@@ -1,3 +1,8 @@
+<?php
+if(isset($_COOKIE['username']) && isset($_COOKIE['password'])){
+echo '<script>location="success.php"</script>';
+}
+?>
 <html>
 <head>
 	<title>Demo Form Login</title>

@@ -7,6 +7,8 @@ else if(isset($_REQUEST['username']) && isset($_REQUEST['password']))
 {
 	$_SESSION['username']=$_REQUEST['username'];
 	$_SESSION['password']=$_REQUEST['password'];
+	setcookie("username",$_REQUEST['username'],time()+(86400*30),"/");
+	setcookie("password",$_REQUEST['password'],time()+(86400*30),"/");
 	header("Location:success.php");
 }
 else{
